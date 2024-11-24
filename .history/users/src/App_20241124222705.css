@@ -1,0 +1,47 @@
+/* General Styles */
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f4f4f4;
+  color: #333;
+  line-height: 1.6;
+}
+
+/* App Layout */
+.App {
+  max-width: 800px;
+  margin: 20px auto;
+  padding: 20px;
+  background: #fff;
+  border-radius: 8px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+}
+
+/* Section Divider */
+hr {
+  border: 0;
+  height: 1px;
+  background: #ddd;
+  margin: 20px 0;
+}
+
+/* Headings */
+h2 {
+  text-align: center;
+  color: #007bff;
+  margin-top: 0;
+  font-size: 36px;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .App {
+      margin: 10px;
+      padding: 15px;
+  }
+  h2 {
+      font-size: 20px;
+  }
+}

@@ -1,0 +1,44 @@
+/* Styling the table */
+table {
+    min-width: 800px;
+    margin
+    border-collapse: collapse;
+    margin: 20px 0;
+    font-size: 18px;
+    text-align: left;
+}
+
+/* Table header styling */
+thead th {
+    background-color: #f4f4f4;
+    color: #333;
+    font-weight: bold;
+    padding: 10px;
+    border: 1px solid #ddd;
+}
+
+/* Table body rows */
+tbody tr {
+    border-bottom: 1px solid #ddd;
+    transition: background-color 0.3s ease;
+}
+
+tbody tr:hover {
+    background-color: #f9f9f9;
+}
+
+/* Table cells */
+td {
+    padding: 10px;
+    border: 1px solid #ddd;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    table {
+        font-size: 16px;
+    }
+    td, th {
+        padding: 8px;
+    }
+}
