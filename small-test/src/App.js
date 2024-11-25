@@ -2,7 +2,8 @@
 // import AccessibleName from "./components/AccessibleName";
 // import MoreNames from "./components/MoreNames";
 // import IconButtons from "./components/IconButtons";
-import ColorList from "./components/ColorList";
+// import ColorList from "./components/ColorList";
+import LoadableColorList from "./components/LoadableColorList";
 
 function App() {
   return (
@@ -14,8 +15,10 @@ function App() {
       <MoreNames />
       <hr/>
       <IconButtons /> 
-      <hr/> */}
-      <ColorList />
+      <hr/> 
+      <ColorList /> */}
+
+      <LoadableColorList />
     </div>
   );
 }
