@@ -3,12 +3,13 @@
 // import MoreNames from "./components/MoreNames";
 // import IconButtons from "./components/IconButtons";
 // import ColorList from "./components/ColorList";
-import LoadableColorList from "./components/LoadableColorList";
+// import LoadableColorList from "./components/LoadableColorList";
+import DataForm from "./components/DataForm";
 
 function App() {
   return (
     <div>
-      {/* {/* <RoleExample />
+      {/* <RoleExample />
       <hr/>
       <AccessibleName />
       <hr/>
@@ -16,9 +17,11 @@ function App() {
       <hr/>
       <IconButtons /> 
       <hr/> 
-      <ColorList /> */}
+      <ColorList /> 
+      <hr/>
+      <LoadableColorList /> */}
 
-      <LoadableColorList />
+      <DataForm />
     </div>
   );
 }
