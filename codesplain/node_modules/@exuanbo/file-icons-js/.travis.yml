@@ -1,0 +1,9 @@
+language: node_js
+node_js:
+  - node
+  - lts/*
+  - 10
+
+after_script:
+  - npm install codecov
+  - ./node_modules/.bin/codecov
