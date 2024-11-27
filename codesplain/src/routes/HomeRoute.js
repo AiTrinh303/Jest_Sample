@@ -22,13 +22,22 @@ function HomeRoute() {
           label="Most Popular Typescript"
           repositories={tsRepos}
         />
-        <RepositoriesTable label="Most Popular Rust" repositories={rustRepos} />
-        <RepositoriesTable label="Most Popular Go" repositories={goRepos} />
+        <RepositoriesTable 
+          label="Most Popular Rust" 
+          repositories={rustRepos} 
+        />
+        <RepositoriesTable 
+          label="Most Popular Go" 
+          repositories={goRepos}
+        />
         <RepositoriesTable
           label="Most Popular Python"
           repositories={pythonRepos}
         />
-        <RepositoriesTable label="Most Popular Ruby" repositories={rubyRepos} />
+        <RepositoriesTable 
+          label="Most Popular Ruby" 
+          repositories={rubyRepos} 
+        />
       </div>
     </div>
   );
