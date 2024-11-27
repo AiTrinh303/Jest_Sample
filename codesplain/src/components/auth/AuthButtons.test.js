@@ -4,6 +4,9 @@ import { SWRConfig } from "swr";
 import { createServer } from "../../testUtils/server";
 import AuthButtons from "./AuthButtons";
 
+const pause = () => new Promise((resolve) => setTimeout(resolve, 100));
+
+
 async function renderComponent() {
   render(
     <SWRConfig value={{ provider: () => new Map() }}>
@@ -20,6 +23,7 @@ async function renderComponent() {
 describe("when user is not signed in", () => {
   createServer([
     {
+      // method: "get",  
       path: "/api/user",
       res: () => {
         return { user: null };
@@ -29,6 +33,10 @@ describe("when user is not signed in", () => {
 
   test("sign in and sign up are visible", async () => {
     await renderComponent();
+
+    // screen.debug();
+    // await pause();
+    // screen.debug();
 
     const signInButton = screen.getByRole("link", { name: /sign in/i });
     const signUpButton = screen.getByRole("link", { name: /sign up/i });
@@ -51,20 +59,26 @@ describe("when user is not signed in", () => {
 describe("when user is signed in", () => {
   createServer([
     {
+      method: "get",
       path: "/api/user",
       res: () => {
         return {
           user: {
-            id: 1,
-            email: "john@admin.com",
+            id: 3,
+            email: "john@gmail.com",
           },
         };
       },
     },
   ]);
 
+
   test("sign in and sign up are not visible", async () => {
     await renderComponent();
+
+  // screen.debug();
+  // await pause();
+  // screen.debug();
 
     const signInButton = screen.queryByRole("link", { name: /sign in/i });
     const signUpButton = screen.queryByRole("link", { name: /sign up/i });

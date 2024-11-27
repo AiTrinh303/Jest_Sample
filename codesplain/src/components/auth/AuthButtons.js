@@ -6,7 +6,8 @@ function AuthButtons() {
 
   if (isLoading) {
     return null;
-  } else if (user) {
+  } 
+  else if (user) {
     return (
       <Link
         className="block whitespace-nowrap rounded-md px-5 py-2.5 text-sm font-medium border"
@@ -15,7 +16,8 @@ function AuthButtons() {
         Sign Out
       </Link>
     );
-  } else {
+  } 
+  else {
     return (
       <>
         <Link
